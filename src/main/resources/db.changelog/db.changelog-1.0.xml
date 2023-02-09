@@ -1,0 +1,44 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+        <changeSet id="1.0.0" author="asayke">
+            <createTable tableName="sleeps">
+
+                <column name="id" type="BIGINT" autoIncrement="true">
+                    <constraints primaryKey="true" nullable="false"/>
+                </column>
+
+                <column name="noise" type="INT">
+                    <constraints nullable="false"/>
+                </column>
+
+                <column name="quality" type="INT">
+                    <constraints nullable="false"/>
+                </column>
+
+                <column name="went_sleep" type="TIMESTAMP">
+                    <constraints nullable="false"/>
+                </column>
+
+                <column name="waked_up_at" type="TIMESTAMP">
+                    <constraints nullable="true"/>
+                </column>
+
+                <column name="fell_asleep_during" type="INT">
+                    <constraints nullable="true"/>
+                </column>
+
+                <column name="created" type="TIMESTAMP" defaultValue="NOW()">
+                    <constraints nullable="false"/>
+                </column>
+
+                <column name="updated" type="TIMESTAMP" defaultValue="NOW()">
+                    <constraints nullable="false"/>
+                </column>
+
+            </createTable>
+        </changeSet>
+
+</databaseChangeLog>
