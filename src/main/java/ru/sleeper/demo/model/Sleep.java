@@ -9,13 +9,13 @@ import java.util.Date;
 @Table(name = "sleeps")
 @Data
 public class Sleep extends BaseEntity {
-    @Column(name = "noise")
+    @Column(name = "noise", nullable = false)
     private Integer noise;
 
-    @Column(name = "quality")
+    @Column(name = "quality", nullable = false)
     private Integer quality;
 
-    @Column(name = "went_sleep")
+    @Column(name = "went_sleep", nullable = false)
     private Date went_sleep;
 
     @Column(name = "waked_up_at")
