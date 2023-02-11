@@ -2,6 +2,7 @@ package ru.sleeper.demo.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
+import ru.sleeper.demo.model.User;
 
 import java.util.Date;
 

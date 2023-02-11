@@ -23,4 +23,11 @@ public class Sleep extends BaseEntity {
 
     @Column(name = "fell_asleep_during")
     private Integer fell_asleep_during;
+
+    @ManyToOne
+    @JoinColumn(
+            nullable = false,
+            name = "app_user_id"
+    )
+    private User user;
 }

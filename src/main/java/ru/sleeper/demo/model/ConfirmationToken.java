@@ -27,9 +27,7 @@ public class ConfirmationToken extends BaseEntity {
     )
     private User user;
 
-    public ConfirmationToken(String token,
-                             Date expiresAt,
-                             User user) {
+    public ConfirmationToken(String token, Date expiresAt, User user) {
         this.token = token;
         this.expiresAt = expiresAt;
         this.user = user;
